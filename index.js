@@ -12,7 +12,7 @@ import fetch from "node-fetch";
 // import { setupMasqr } from "./Masqr.js";
 import config from "./config.js";
 
-console.log(chalk.yellow("🚀 Starting server..."));
+console.log(chalk.yellow("Starting server..."));
 
 const __dirname = process.cwd();
 const server = http.createServer();
@@ -23,7 +23,7 @@ const cache = new Map();
 const CACHE_TTL = 30 * 24 * 60 * 60 * 1000; // Cache for 30 Days
 
 if (config.challenge !== false) {
-  console.log(chalk.green("🔒 Password protection is enabled! Listing logins below"));
+  console.log(chalk.green("Password protection is enabled! Listing logins below"));
   // biome-ignore lint: idk
   Object.entries(config.users).forEach(([username, password]) => {
     console.log(chalk.blue(`Username: ${username}, Password: ${password}`));
@@ -135,7 +135,7 @@ server.on("upgrade", (req, socket, head) => {
 });
 
 server.on("listening", () => {
-  console.log(chalk.green(`🌍 Server is running on http://localhost:${PORT}`));
+  console.log(chalk.green(`Server is running on http://localhost:${PORT}`));
 });
 
 server.listen({ port: PORT });
