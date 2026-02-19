@@ -1,0 +1,1 @@
+I am currently solo'ing this project so if you want to help with backend or somthing just email me :) 
